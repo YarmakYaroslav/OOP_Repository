@@ -82,11 +82,11 @@ void readFromFile(const char* fileName)
     {
         sproduct product;
         product_index = 0;
-        while (fin.eof())
+        while (true)
         {
            fin.read((char*)&product, sizeof(product));
-           //if (fin.eof())
-             //   break;
+           if (fin.eof())
+             break;
             arr[product_index] = product;
             product_index++;
         }
