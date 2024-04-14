@@ -190,3 +190,4 @@ void textToScreen(int product_index)
     }
     cout << "\n";
 }
+
