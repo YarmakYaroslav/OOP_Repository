@@ -86,7 +86,7 @@ void readFromFile(const char* fileName)
         {
            fin.read((char*)&product, sizeof(product));
            if (fin.eof())
-             break;
+            break;
             arr[product_index] = product;
             product_index++;
         }
