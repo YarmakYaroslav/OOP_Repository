@@ -8,27 +8,27 @@ using namespace std;
 class Taxi
 {
 private:
-	char name[25];
+	string name[25];
 	int cost;
 	int driving_experience;
 
 public:
-	char setName(char* n);
-	char getName(char* n);
+	string setName(string* n);
+	string getName(string* n);
 	void setCost(int c);
 	int getCost();
 	void setDriving_experience(int d);
 	int getDriving_experience();
 };
 
-char Taxi::setName(char* n)
+string Taxi::setName(string* n)
 {
-	strcpy(name, n); // 1) куди 2) звідки
+	name[25] = *n;
 }
 
-char Taxi::getName(char* n)
+string Taxi::getName(string* n)
 {
-	strcpy(n, name);// на що краще замінити "strcpy"
+	return name[25];
 }
 
 void Taxi::setCost(int c)
@@ -53,9 +53,10 @@ int Taxi::getDriving_experience()
 
 int main()
 {
+	
 	Taxi SpeedCar;
-	char name[25] = { "Volvo" };
-	cin >> name;
+	string name[25] = { "Volvo" };
+	cin >> name[25];
 	SpeedCar.setName(name);
 	int cost = 30;
 	cin >> cost;
@@ -63,7 +64,7 @@ int main()
 	int driving_experience = 58;
 	//SpeedCar.setDriving_experience(driving_experience);
 	SpeedCar.getName(name);
-	cout << SpeedCar.getName() << endl;
+	cout << SpeedCar.getName(name) << endl;
 	cout << SpeedCar.getCost() << endl;
 	//cout << SpeedCar.getDriving_experience() << endl;
 }
