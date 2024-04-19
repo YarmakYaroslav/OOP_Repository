@@ -70,6 +70,7 @@ int menu()
     cin >> ans;
     return ans;
 }
+
 void readFromFile(const char* fileName)
 {
     ifstream fin;
@@ -86,10 +87,12 @@ void readFromFile(const char* fileName)
         {
            fin.read((char*)&product, sizeof(product));
            if (fin.eof())
-            break;
-            arr[product_index] = product;
-            product_index++;
+                break;
+
+           arr[product_index] = product;
+           product_index++;
         }
+
         fin.close();
         cout << "Data read from file\n";
         textToScreen(product_index);
@@ -100,6 +103,7 @@ void saveToFile(const char* fileName)
 {
     ofstream fout;
     fout.open(fileName, ios::binary);
+
     if (!fout)
     {
         cout << "File not found";
