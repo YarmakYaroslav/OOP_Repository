@@ -60,8 +60,10 @@ istream& operator >>(istream& input, Vector& v)
 }
 int& Vector::operator [](int i)
 {
-    if (i < 0) cout << "index <0";
-    if (i >= size) cout << "index>size";
+    if (i < 0) 
+        cout << "index <0";
+    if (i >= size) 
+        cout << "index>size";
     return beg[i];
 }
 int Vector::getSize()
