@@ -1,9 +1,9 @@
-#include "Vector.h"
+#include "Student.h"
 #include <iostream>
 using namespace std;
 int main()
 {
-    Vector x(6), y(x);
+    Student x(6), y(x);
     cout << "Massiv x \n";
     cout << x;
     cout << "Vvedit nomera predmeti dlya dodatcovih balliv:\n";
@@ -22,7 +22,7 @@ int main()
     x(3);
     cout << "Usi predmeti + 3 bal za Olimpiadu \n";
     cout << x << endl;
-    Vector* p1 = new Vector[3];
+    Student* p1 = new Student[3];
     *p1 = y;
     *(p1 + 1) = x;
     for (int i = 0; i < 3; i++)
