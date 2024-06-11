@@ -40,7 +40,8 @@ const Student& Student::operator =(const Student& v)
 }
 ostream& operator<<(ostream& output, const Student& v)
 {
-    if (v.size == 0) output << "Empty\n";
+    if (v.size == 0)
+        output << "Empty\n";
     else
     {
         for (int i = 0; i < v.size; i++)
