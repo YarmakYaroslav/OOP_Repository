@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+
 Student::Student(int s)
 {
     if (s > MAX_SIZE)

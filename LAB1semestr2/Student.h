@@ -8,6 +8,7 @@ class Student
 {
     int size;
     int* beg;
+
 public:
     Student()
     {
